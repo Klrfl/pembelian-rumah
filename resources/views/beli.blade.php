@@ -4,10 +4,9 @@
         <header class="py-4">
             <h1>Beli rumah</h1>
             <p>Halaman untuk membeli rumah (INSERT).</p>
-            <p>bentar ya formnya belum jadi</p>
         </header>
 
-        <form class="p-4 border-2 border-solid border-slate-200" action="/beli" method="post">
+        <form class="p-4 border-2 border-solid border-slate-200 rounded-lg" action="/beli" method="post">
             @csrf
             <label for="kode-unit">Kode unit</label>
             <input type="text" name="kode_unit" id="kode-unit" required>

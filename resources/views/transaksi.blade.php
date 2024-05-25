@@ -1,5 +1,9 @@
 <x-layout-main>
-    <h1>Transaksi</h1>
+    <header class="pb-4">
+        <h1>Transaksi</h1>
+        <p>Data transaksi</p>
+    </header>
+
     <table class="border-solid border-2 border-stone-200 border-collapse">
         <thead>
             <th>Kode unit</th>
@@ -15,7 +19,7 @@
             <td>{{$typeRumah->type_rumah}}</td>
             <td>{{$transaksi->luas_tanah}}</td>
             <td>{{$transaksi->luas_bangunan}}</td>
-            <td>{{$transaksi->harga_rumah}}</td>
+            <td class="font-bold">{{$transaksi->harga_rumah}}</td>
         </tbody>
     </table>
 

@@ -2,9 +2,10 @@
     <main class="p-4 max-w-4xl mx-auto">
         <header class="py-4">
             <h1>Sunting transaksi</h1>
+            <p>Halaman untuk menyunting transaksi (UPDATE).</p>
         </header>
 
-        <form class="p-4 border-2 border-solid border-slate-200" action="{{route('transaksi.update', $transaksi->id_transaksi)}}" method="post">
+        <form class="p-4 border-2 border-solid border-slate-200 rounded-lg" action="{{route('transaksi.update', $transaksi->id_transaksi)}}" method="post">
             @method('PUT')
             @csrf
             <label for="kode-unit">Kode unit</label>
