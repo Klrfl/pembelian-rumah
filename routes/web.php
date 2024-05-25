@@ -12,3 +12,4 @@ Route::get('/', function () {
 Route::get('/beli', [PembelianRumahController::class, 'index']);
 Route::post('/beli', [PembelianRumahController::class, 'create']);
 Route::get('/transaksi/{id}', [PembelianRumahController::class, 'show']);
+Route::delete('/transaksi/{id}', [PembelianRumahController::class, 'destroy']);

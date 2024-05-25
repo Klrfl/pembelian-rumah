@@ -41,4 +41,11 @@ class PembelianRumahController extends Controller
 
         return redirect('/');
     }
+
+    public function destroy(string $id): RedirectResponse
+    {
+        $transaksi = PembelianRumah::query()->find($id)->first();
+        $transaksi->delete();
+        return redirect('/');
+    }
 }
