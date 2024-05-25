@@ -31,8 +31,13 @@ class PembelianRumahController extends Controller
     {
         $all_type_rumah = TypeRumah::all();
         $transaksi = PembelianRumah::query()->find($id);
+        $typeRumah = $transaksi->typeRumah;
 
-        return view('transaksi-edit', ['transaksi' => $transaksi, 'all_type_rumah' => $all_type_rumah]);
+        return view('transaksi-edit', [
+            'transaksi' => $transaksi,
+            'all_type_rumah' => $all_type_rumah,
+            'typeRumah' => $typeRumah
+        ]);
     }
 
     public function create(Request $request): RedirectResponse
