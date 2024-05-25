@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('index', ['all_pembelian_rumah' => $all_pembelian_rumah]);
 });
 
-Route::get('/beli', [PembelianRumahController::class, 'index'])->name('beli,show');
+Route::get('/beli', [PembelianRumahController::class, 'index'])->name('beli.show');
 Route::post('/beli', [PembelianRumahController::class, 'create'])->name('beli.update');
 Route::get('/transaksi/{id}', [PembelianRumahController::class, 'show'])->name('transaksi.show');
 Route::get('/transaksi/{id}/edit', [PembelianRumahController::class, 'showUpdate'])->name('transaksi.show-update');
