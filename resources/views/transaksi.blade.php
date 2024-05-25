@@ -12,7 +12,7 @@
         <tbody>
             <td>{{$transaksi->kode_unit}}</td>
             <td>{{$transaksi->nama_pembeli}}</td>
-            <td>{{$transaksi->id_type}}</td>
+            <td>{{$typeRumah->type_rumah}}</td>
             <td>{{$transaksi->luas_tanah}}</td>
             <td>{{$transaksi->luas_bangunan}}</td>
             <td>{{$transaksi->harga_rumah}}</td>

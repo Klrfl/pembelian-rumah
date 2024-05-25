@@ -23,7 +23,8 @@ class PembelianRumahController extends Controller
     public function show(string $id): View|Factory
     {
         $transaksi = PembelianRumah::query()->find($id);
-        return view('transaksi', ['transaksi' => $transaksi]);
+        $typeRumah = $transaksi->typeRumah;
+        return view('transaksi', ['transaksi' => $transaksi, 'typeRumah' => $typeRumah]);
     }
 
     public function showUpdate(string $id): View |Factory
