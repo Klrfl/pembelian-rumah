@@ -1,7 +1,7 @@
 <x-layout-base>
     <main class="max-w-4xl mx-auto p-4">
 
-        <header>
+        <header class="py-4">
             <h1>Beli rumah</h1>
             <p>Halaman untuk membeli rumah (INSERT).</p>
             <p>bentar ya formnya belum jadi</p>
