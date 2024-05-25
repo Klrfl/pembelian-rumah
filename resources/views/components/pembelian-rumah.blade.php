@@ -1,5 +1,5 @@
-<li class="p-4 outline-2 outline outline-stone-200">
-    <a href="{{route('transaksi.show', $transaksi->id_transaksi)}}" class="grid grid-cols-2">
+<li>
+    <a href="{{route('transaksi.show', $transaksi->id_transaksi)}}" class="grid grid-cols-2 p-4 outline-2 outline outline-stone-200 focus:outline-blue-700 focus:outline-3">
         <p>Kode unit: {{$transaksi->kode_unit}}</p>
         <p>Pembeli: {{$transaksi->nama_pembeli}}</p>
         <p>Harga rumah: <span class="font-bold">{{$transaksi->harga_rumah}}</span></p>
