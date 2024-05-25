@@ -12,4 +12,6 @@ Route::get('/', function () {
 Route::get('/beli', [PembelianRumahController::class, 'index'])->name('beli,show');
 Route::post('/beli', [PembelianRumahController::class, 'create'])->name('beli.update');
 Route::get('/transaksi/{id}', [PembelianRumahController::class, 'show'])->name('transaksi.show');
+Route::get('/transaksi/{id}/edit', [PembelianRumahController::class, 'showUpdate'])->name('transaksi.show-update');
+Route::put('/transaksi/{id}', [PembelianRumahController::class, 'update'])->name('transaksi.update');
 Route::delete('/transaksi/{id}', [PembelianRumahController::class, 'destroy'])->name('transaksi.destroy');

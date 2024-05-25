@@ -26,6 +26,14 @@ class PembelianRumahController extends Controller
         return view('transaksi', ['transaksi' => $transaksi]);
     }
 
+    public function showUpdate(string $id): View |Factory
+    {
+        $all_type_rumah = TypeRumah::all();
+        $transaksi = PembelianRumah::query()->find($id);
+
+        return view('transaksi-edit', ['transaksi' => $transaksi, 'all_type_rumah' => $all_type_rumah]);
+    }
+
     public function create(Request $request): RedirectResponse
     {
         $pembelian_rumah = new PembelianRumah;
