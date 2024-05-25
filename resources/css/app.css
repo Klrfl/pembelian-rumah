@@ -10,4 +10,17 @@
     .nav-link {
         @apply inline-block p-4 px-8 hover:bg-slate-300;
     }
+
+    label,
+    input {
+        @apply block;
+    }
+
+    label {
+        @apply pt-4 pb-2;
+    }
+
+    input {
+        @apply p-4 bg-slate-100 w-full;
+    }
 }
