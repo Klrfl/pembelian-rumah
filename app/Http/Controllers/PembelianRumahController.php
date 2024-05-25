@@ -20,6 +20,12 @@ class PembelianRumahController extends Controller
         return view('beli', ['all_type_rumah' => $all_type_rumah]);
     }
 
+    public function show(string $id): View|Factory
+    {
+        $transaksi = PembelianRumah::query()->where('id_transaksi', $id)->first();
+        return view('transaksi', ['transaksi' => $transaksi]);
+    }
+
     public function create(Request $request): RedirectResponse
     {
         $pembelian_rumah = new PembelianRumah;
