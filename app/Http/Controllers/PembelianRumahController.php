@@ -3,11 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\PembelianRumah;
+use App\Models\TypeRumah;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class PembelianRumahController extends Controller
 {
+    /**
+     * @return View|Factory
+     */
+    public function index(): View|Factory
+    {
+        $all_type_rumah = TypeRumah::all();
+        return view('beli', ['all_type_rumah' => $all_type_rumah]);
+    }
+
     public function create(Request $request): RedirectResponse
     {
         $pembelian_rumah = new PembelianRumah;
