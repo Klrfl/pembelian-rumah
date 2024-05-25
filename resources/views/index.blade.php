@@ -1,12 +1,12 @@
 <x-layout-main>
-    <h1>Pembelian rumah</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae necessitatibus error ut animi saepe totam assumenda illum repellendus consequatur voluptas in distinctio minus quidem excepturi, nostrum magnam inventore ullam consequuntur.</p>
+    <header>
+        <h1>Pembelian rumah</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae necessitatibus error ut animi saepe totam assumenda illum repellendus consequatur voluptas in distinctio minus quidem excepturi, nostrum magnam inventore ullam consequuntur.</p>
+    </header>
 
-    <ul>
+    <ul class="flex flex-col gap-4 max-w-4xl">
         @foreach ($all_pembelian_rumah as $pembelian_rumah)
-        <li>
-            {{ $pembelian_rumah}}
-        </li>
+        <x-pembelian-rumah :transaksi="$pembelian_rumah" />
         @endforeach
     </ul>
 </x-layout-main>
