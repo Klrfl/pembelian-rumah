@@ -1,5 +1,5 @@
 <x-layout-base>
-    <main>
+    <main class="p-4">
         <h1>Pembelian rumah</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae necessitatibus error ut animi saepe totam assumenda illum repellendus consequatur voluptas in distinctio minus quidem excepturi, nostrum magnam inventore ullam consequuntur.</p>
 
