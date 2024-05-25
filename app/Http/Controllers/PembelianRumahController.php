@@ -22,7 +22,7 @@ class PembelianRumahController extends Controller
 
     public function show(string $id): View|Factory
     {
-        $transaksi = PembelianRumah::query()->where('id_transaksi', $id)->first();
+        $transaksi = PembelianRumah::query()->find($id);
         return view('transaksi', ['transaksi' => $transaksi]);
     }
 
@@ -44,7 +44,7 @@ class PembelianRumahController extends Controller
 
     public function destroy(string $id): RedirectResponse
     {
-        $transaksi = PembelianRumah::query()->find($id)->first();
+        $transaksi = PembelianRumah::query()->find($id);
         $transaksi->delete();
         return redirect('/');
     }
