@@ -20,7 +20,7 @@
     </table>
 
     <div class="flex gap-2 mt-4">
-        <a class="text-white bg-blue-500 p-4 px-8" href="/sunting">Sunting</a>
+        <a class="text-white bg-blue-500 p-4 px-8" href="{{route('transaksi.show-update', $transaksi->id_transaksi)}}">Sunting</a>
 
         <form action="{{route('transaksi.destroy', $transaksi->id_transaksi)}}" method="post">
             @method('DELETE')
