@@ -27,4 +27,9 @@
     select {
         @apply p-4;
     }
+
+    th,
+    td {
+        @apply p-2 px-4;
+    }
 }
