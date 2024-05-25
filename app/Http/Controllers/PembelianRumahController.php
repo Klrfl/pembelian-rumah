@@ -10,10 +10,17 @@ class PembelianRumahController extends Controller
 {
     public function create(Request $request): RedirectResponse
     {
-        $new_pembelian_rumah = new PembelianRumah;
-        $new_pembelian_rumah->kode_unit = $request->kode_unit;
+        $pembelian_rumah = new PembelianRumah;
 
-        return redirect('index');
+        $pembelian_rumah->kode_unit = $request->kode_unit;
+        $pembelian_rumah->nama_pembeli = $request->nama_pembeli;
+        $pembelian_rumah->id_type = $request->id_type;
+        $pembelian_rumah->luas_tanah = $request->luas_tanah;
+        $pembelian_rumah->luas_bangunan = $request->luas_bangunan;
+        $pembelian_rumah->harga_rumah = $request->harga_rumah;
+
+        $pembelian_rumah->save();
+
+        return redirect('/');
     }
-    //
 }
