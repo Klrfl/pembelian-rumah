@@ -9,9 +9,9 @@
         <form class="p-4 border-2 border-solid border-slate-200 rounded-lg" action="/beli" method="post">
             @csrf
             <label for="kode-unit">Kode unit</label>
-            <input type="text" name="kode_unit" id="kode-unit" required>
+            <input type="text" name="kode_unit" id="kode-unit" placeholder="kode unit" required>
             <label for="nama-pembeli">Nama pembeli</label>
-            <input type="text" name="nama_pembeli" id="nama-pembeli" required>
+            <input type="text" name="nama_pembeli" id="nama-pembeli" placeholder="Nama pembeli" required>
             <label for="tipe">Tipe</label>
             <select name="id_type" id="tipe" required>
                 <option disabled selected>Pilih satu</option>
@@ -20,11 +20,11 @@
                 @endforeach
             </select>
             <label for="luas-tanah">Luas tanah</label>
-            <input type="text" name="luas_tanah" id="luas-tanah" required>
+            <input type="text" name="luas_tanah" id="luas-tanah" placeholder="Luas tanah" required>
             <label for="luas-bangunan">Luas bangunan</label>
-            <input type="text" name="luas_bangunan" id="luas-bangunan" required>
+            <input type="text" name="luas_bangunan" id="luas-bangunan" placeholder="Luas bangunan" required>
             <label for="harga-rumah">Harga rumah</label>
-            <input type="text" name="harga_rumah" id="harga-rumah" required>
+            <input type="text" name="harga_rumah" id="harga-rumah" placeholder="Harga rumah" required>
 
             <button class="p-4 my-4 bg-blue-500 text-white">Beli rumah</button>
         </form>
