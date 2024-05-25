@@ -10,7 +10,9 @@
         <input type="text" name="nama-pembeli" id="nama-pembeli">
         <label for="tipe">Tipe</label>
         <select name="tipe" id="tipe">
-            <option value=""></option>
+            @foreach ($all_type_rumah as $type_rumah)
+            <option value="{{$type_rumah->id_type}}">{{ $type_rumah->type_rumah }}</option>
+            @endforeach
         </select>
         <label for="luas-tanah">Luas tanah</label>
         <input type="text" name="luas-tanah" id="luas-tanah">

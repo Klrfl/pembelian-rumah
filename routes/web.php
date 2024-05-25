@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('index', ['all_type_rumah' => $all_type_rumah]);
 });
 
-Route::view('/beli', 'beli');
+Route::get('/beli', function () {
+    $all_type_rumah = TypeRumah::all();
+    return view('beli', ['all_type_rumah' => $all_type_rumah]);
+});
+
 Route::view('/ubah', 'ubah-pembelian');
 Route::view('/batal', 'batal-pembelian');

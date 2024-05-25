@@ -23,4 +23,8 @@
     input {
         @apply p-4 bg-slate-100 w-full;
     }
+
+    select {
+        @apply p-4;
+    }
 }
