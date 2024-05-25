@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('index', ['all_pembelian_rumah' => $all_pembelian_rumah]);
 });
 
-Route::get('/beli', [PembelianRumahController::class, 'index']);
-Route::post('/beli', [PembelianRumahController::class, 'create']);
-Route::get('/transaksi/{id}', [PembelianRumahController::class, 'show']);
-Route::delete('/transaksi/{id}', [PembelianRumahController::class, 'destroy']);
+Route::get('/beli', [PembelianRumahController::class, 'index'])->name('beli,show');
+Route::post('/beli', [PembelianRumahController::class, 'create'])->name('beli.update');
+Route::get('/transaksi/{id}', [PembelianRumahController::class, 'show'])->name('transaksi.show');
+Route::delete('/transaksi/{id}', [PembelianRumahController::class, 'destroy'])->name('transaksi.destroy');
