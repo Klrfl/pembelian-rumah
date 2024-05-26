@@ -11,4 +11,6 @@ class TypeRumah extends Model
     protected $primaryKey = 'id_type';
     protected $table = 'type_rumah';
     public $timestamps = false;
+
+    protected $fillable = ['type_rumah'];
 }

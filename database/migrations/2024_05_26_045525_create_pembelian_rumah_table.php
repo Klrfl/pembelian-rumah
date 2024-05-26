@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id('id_transaksi');
             $table->integer('kode_unit');
             $table->string('nama_pembeli');
+            $table->bigInteger('id_type')->unsigned();
             $table->foreign('id_type')->references('id_type')->on('type_rumah');
             $table->string('luas_tanah');
             $table->string('luas_bangunan');
