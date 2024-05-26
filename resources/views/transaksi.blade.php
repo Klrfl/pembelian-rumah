@@ -1,4 +1,4 @@
-<x-layout-main>
+<x-layout-main title="Pembelian rumah - Transaksi {{$transaksi->kode_unit}}">
     <header class="pb-4">
         <h1>Transaksi</h1>
         <p>Data transaksi</p>

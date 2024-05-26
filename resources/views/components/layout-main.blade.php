@@ -1,4 +1,4 @@
-<x-layout-base>
+<x-layout-base :title="$title">
     <main class="p-4">
         {{ $slot }}
     </main>

@@ -1,4 +1,4 @@
-<x-layout-base>
+<x-layout-base title="Pembelian rumah - Edit">
     <main class="p-4 max-w-4xl mx-auto">
         <header class="py-4">
             <h1>Sunting transaksi</h1>

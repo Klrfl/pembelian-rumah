@@ -1,4 +1,4 @@
-<x-layout-main>
+<x-layout-main title="Pembelian rumah - Home">
     <header>
         <h1>Pembelian rumah</h1>
         <p>daftar pembelian rumah</p>
