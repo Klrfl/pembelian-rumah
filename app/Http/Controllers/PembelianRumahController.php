@@ -43,14 +43,15 @@ class PembelianRumahController extends Controller
 
     public function create(StoreTransaksiRequest $request): RedirectResponse
     {
+        $validated = $request->validated();
         $pembelian_rumah = new PembelianRumah;
 
-        $pembelian_rumah->kode_unit = $request->kode_unit;
-        $pembelian_rumah->nama_pembeli = $request->nama_pembeli;
-        $pembelian_rumah->id_type = $request->id_type;
-        $pembelian_rumah->luas_tanah = $request->luas_tanah;
-        $pembelian_rumah->luas_bangunan = $request->luas_bangunan;
-        $pembelian_rumah->harga_rumah = $request->harga_rumah;
+        $pembelian_rumah->kode_unit = $validated['kode_unit'];
+        $pembelian_rumah->nama_pembeli = $validated['nama_pembeli'];
+        $pembelian_rumah->id_type = $validated['id_type'];
+        $pembelian_rumah->luas_tanah = $validated['luas_tanah'];
+        $pembelian_rumah->luas_bangunan = $validated['luas_bangunan'];
+        $pembelian_rumah->harga_rumah = $validated['harga_rumah'];
 
         $pembelian_rumah->save();
 
