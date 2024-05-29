@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreTransaksiRequest;
 use App\Models\PembelianRumah;
 use App\Models\TypeRumah;
 use Illuminate\Contracts\View\Factory;
@@ -40,7 +41,7 @@ class PembelianRumahController extends Controller
         ]);
     }
 
-    public function create(Request $request): RedirectResponse
+    public function create(StoreTransaksiRequest $request): RedirectResponse
     {
         $pembelian_rumah = new PembelianRumah;
 
