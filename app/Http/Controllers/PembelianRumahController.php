@@ -15,7 +15,7 @@ class PembelianRumahController extends Controller
     /**
      * @return View|Factory
      */
-    public function index(): View|Factory
+    public function create(): View|Factory
     {
         $all_type_rumah = TypeRumah::all();
         return view('beli', ['all_type_rumah' => $all_type_rumah]);
@@ -28,7 +28,7 @@ class PembelianRumahController extends Controller
         return view('transaksi', ['transaksi' => $transaksi, 'typeRumah' => $typeRumah]);
     }
 
-    public function showUpdate(string $id): View
+    public function edit(string $id): View
     {
         $all_type_rumah = TypeRumah::all();
         $transaksi = PembelianRumah::query()->find($id);
@@ -41,7 +41,7 @@ class PembelianRumahController extends Controller
         ]);
     }
 
-    public function create(StoreTransaksiRequest $request): RedirectResponse
+    public function store(StoreTransaksiRequest $request): RedirectResponse
     {
         $validated = $request->validated();
         $pembelian_rumah = new PembelianRumah;
