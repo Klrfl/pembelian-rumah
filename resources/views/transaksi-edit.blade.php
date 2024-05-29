@@ -5,6 +5,12 @@
             <p>Halaman untuk menyunting transaksi (UPDATE).</p>
         </header>
 
+        <ul class="my-4">
+            @foreach ($errors->all() as $error)
+            <li class="p-4 bg-red-200">{{$error}}</li>
+            @endforeach
+        </ul>
+
         <form class="p-4 border-2 border-solid border-slate-200 rounded-lg" action="{{route('transaksi.update', $transaksi->id_transaksi)}}" method="post">
             @method('PUT')
             @csrf
@@ -14,7 +20,7 @@
             <input type="text" name="nama_pembeli" id="nama-pembeli" value="{{$transaksi->nama_pembeli}}" required>
             <label for="tipe">Tipe</label>
             <select name="id_type" id="tipe" required>
-                <option disabled>Pilih satu</option>
+                <option disabled selected value="">Pilih satu</option>
                 @foreach ($all_type_rumah as $type_rumah)
                 <option value="{{$type_rumah->id_type}}" {!! $type_rumah->id_type === $typeRumah->id_type ? 'selected' : '' !!}>{{ $type_rumah->type_rumah }}</option>
                 @endforeach

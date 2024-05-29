@@ -57,16 +57,17 @@ class PembelianRumahController extends Controller
         return redirect('/');
     }
 
-    public function update(Request $request, string $id): RedirectResponse
+    public function update(StoreTransaksiRequest $request, string $id): RedirectResponse
     {
+        $validated = $request->validated();
         $transaksi = PembelianRumah::query()->find($id);
 
-        $transaksi->kode_unit = $request->kode_unit;
-        $transaksi->nama_pembeli = $request->nama_pembeli;
-        $transaksi->id_type = $request->id_type;
-        $transaksi->luas_tanah = $request->luas_tanah;
-        $transaksi->luas_bangunan = $request->luas_bangunan;
-        $transaksi->harga_rumah = $request->harga_rumah;
+        $transaksi->kode_unit = $validated['kode_unit'];
+        $transaksi->nama_pembeli = $validated['nama_pembeli'];
+        $transaksi->id_type = $validated['id_type'];
+        $transaksi->luas_tanah = $validated['luas_tanah'];
+        $transaksi->luas_bangunan = $validated['luas_bangunan'];
+        $transaksi->harga_rumah = $validated['harga_rumah'];
 
         $transaksi->save();
 
