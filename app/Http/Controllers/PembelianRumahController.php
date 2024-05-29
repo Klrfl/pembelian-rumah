@@ -8,7 +8,6 @@ use App\Models\TypeRumah;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 
 class PembelianRumahController extends Controller
 {
@@ -23,7 +22,7 @@ class PembelianRumahController extends Controller
 
     public function show(string $id): View
     {
-        $transaksi = PembelianRumah::query()->find($id);
+        $transaksi = PembelianRumah::query()->findOrFail($id);
         $typeRumah = $transaksi->typeRumah;
         return view('transaksi', ['transaksi' => $transaksi, 'typeRumah' => $typeRumah]);
     }
@@ -31,7 +30,7 @@ class PembelianRumahController extends Controller
     public function edit(string $id): View
     {
         $all_type_rumah = TypeRumah::all();
-        $transaksi = PembelianRumah::query()->find($id);
+        $transaksi = PembelianRumah::query()->findOrFail($id);
         $typeRumah = $transaksi->typeRumah;
 
         return view('transaksi-edit', [
@@ -77,7 +76,7 @@ class PembelianRumahController extends Controller
 
     public function destroy(string $id): RedirectResponse
     {
-        $transaksi = PembelianRumah::query()->find($id);
+        $transaksi = PembelianRumah::query()->findOrFail($id);
         $transaksi->delete();
         return redirect('/');
     }
