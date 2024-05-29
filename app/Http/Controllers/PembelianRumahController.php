@@ -21,14 +21,14 @@ class PembelianRumahController extends Controller
         return view('beli', ['all_type_rumah' => $all_type_rumah]);
     }
 
-    public function show(string $id): View|Factory
+    public function show(string $id): View
     {
         $transaksi = PembelianRumah::query()->find($id);
         $typeRumah = $transaksi->typeRumah;
         return view('transaksi', ['transaksi' => $transaksi, 'typeRumah' => $typeRumah]);
     }
 
-    public function showUpdate(string $id): View |Factory
+    public function showUpdate(string $id): View
     {
         $all_type_rumah = TypeRumah::all();
         $transaksi = PembelianRumah::query()->find($id);
